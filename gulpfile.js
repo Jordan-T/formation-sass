@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const runSequence = require('run-sequence');
+const browserSync = require('browser-sync').create();
 
 
 // =SASS
@@ -12,6 +13,7 @@ gulp.task('sass', function(){
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(gulp.dest('./public/medias/styles'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -19,6 +21,7 @@ gulp.task('sass', function(){
 gulp.task('html', function(){
   return gulp.src('./src/html/**/*.html')
     .pipe(gulp.dest('./public/'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -26,6 +29,7 @@ gulp.task('html', function(){
 gulp.task('medias', function(){
   return gulp.src('./src/medias/**/*')
     .pipe(gulp.dest('./public/medias/'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -44,6 +48,14 @@ gulp.task('build', function(callback){
     ['sass', 'html', 'medias'],
     callback
   );
+});
+
+
+// =SERVE
+gulp.task('serve', ['watch'], function(){
+  browserSync.init({
+    server: "./public"
+  })
 });
 
 
