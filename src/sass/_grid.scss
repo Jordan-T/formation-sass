@@ -1,0 +1,34 @@
+/* ********** GRID ********** */
+.row {
+  @media screen and (min-width: $screen-small) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+[class^="col-"] {
+  width: 100%;
+  margin: 0 0 35px 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $screen-small) {
+  [class^="col-"] {
+    margin: 0 15px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: ($i * 100% / 12)
+    }
+  }
+}
+
+.container-fluid {
+  .row {
+    margin: 0;
+  }
+  [class^="col-"] {
+    margin: 0;
+  }
+}

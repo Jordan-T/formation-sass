@@ -1,0 +1,661 @@
+/* ********** IMPORTS ********** */
+@import 'variables';
+@import 'reset';
+@import 'fonts';
+@import 'grid';
+
+
+
+
+/* ********** STYLE ********** */
+
+/* --- General --- */
+
+body {
+  font-family: $ff-bitter;
+  font-size: 14px;
+  color: $medium-grey;
+  line-height: 1;
+}
+
+.container {
+  padding: 10% 15px;
+  width: 100%;
+
+  @media screen and (min-width: $screen-small) {
+    padding: 5% 15px;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
+
+/* --- Images --- */
+
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.background-image {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+
+  @media screen and (min-width: $screen-small) {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+/* --- Typo --- */
+
+.text-center {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $screen-small) {
+    margin-bottom: 75px;
+  }
+}
+
+h1 {
+  color: $white;
+  font-family: $ff-poppins-bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: $screen-small) {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  color: $black;
+  font-size: 30px;
+  font-family: $ff-poppins-bold;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $screen-small) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  color: $black;
+  font-size: 18px;
+  font-family: $ff-poppins-bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: $red;
+  font-size: 40px;
+  font-family: $ff-poppins-bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin: 10px 0;
+
+  @media screen and (min-width: $screen-small) {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+    font-size: 20px;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+.red {
+  color: $red;
+}
+
+/* -- Icons --- */
+
+.icon {
+  display: block;
+  width: 75px;
+  height: 55px;
+  margin: 0 auto  15px;
+
+  @media screen and (min-width: $screen-medium) {
+    margin-bottom: 40px;
+  }
+}
+
+.icon-heart {
+  background: url(../images/icon-heart.svg) no-repeat center center;
+  background-size: auto 100%;
+}
+
+.icon-responsive {
+  background: url(../images/icon-responsive.svg) no-repeat center center;
+  background-size: 100% auto;
+}
+
+.icon-marketing {
+  background: url(../images/icon-marketing.svg) no-repeat center center;
+  background-size: auto 100%;
+}
+
+.icon-rounded {
+  width: 86px;
+  height: 86px;
+  border: 2px solid $medium-grey;
+  border-radius: 50%;
+}
+
+.icon-react {
+  background: $sheer-grey url(../images/icon-react.svg) no-repeat center center;
+  background-size: 60px;
+}
+
+.icon-git {
+  background: $sheer-grey url(../images/icon-git.svg) no-repeat center center;
+  background-size: 60px;
+}
+
+.icon-sass {
+  background: $sheer-grey url(../images/icon-sass.svg) no-repeat center center;
+  background-size: 60px;
+}
+
+/* --- Buttons --- */
+
+.button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all 150ms ease;
+
+  @media screen and (min-width: $screen-small) {
+    width: auto;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+
+.button-red {
+  background-color: $red;
+  border-radius: 30px;
+  font-family: $ff-poppins-bold;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 20px;
+
+  @media screen and (min-width: $screen-small) {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 20px 40px;
+  }
+}
+
+.button-grey {
+  background-color: $rock-grey;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: $ff-poppins-bold;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  width: 100%;
+  margin-top: 5%;
+
+  @media screen and (min-width: $screen-small) {
+    margin: 30px 0 0 0;
+    width: auto;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+  }
+}
+
+/* --- Header --- */
+
+header {
+  .container {
+    padding: 5% 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+      padding: 0 15px;
+    }
+
+    .logo {
+      color: $dark-grey;
+      font-family: $ff-poppins-bold;
+      background-size: 40px;
+      display: inline-block;
+      margin: 0 auto;
+      font-size: 18px;
+
+      @media screen and (min-width: $screen-small) {
+        font-size: 24px;
+      }
+
+      @media screen and (min-width: $screen-medium) {
+        margin: 35px 0;
+      }
+
+      img {
+        width: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      span {
+        line-height: 50px;
+      }
+    }
+
+    .menu {
+      text-align: left;
+
+      ul {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+
+        @media screen and (min-width: $screen-small) {
+          display: flex;
+          justify-content: space-around;
+          margin: 15px 0 0 0;
+        }
+
+        @media screen and (min-width: $screen-medium) {
+          margin: 35px 0;
+        }
+      }
+
+      .menu-item {
+        display: inline-block;
+        margin: 0;
+
+        a {
+          display: inline-block;
+          color: $medium-grey;
+          font-family: $ff-poppins-bold;
+          text-transform: uppercase;
+
+          line-height: 1;
+          height: auto;
+          padding: 0 10px 10px 10px;
+
+          @media screen and (min-width: $screen-small) {
+            padding: 0 20px;
+            height: 50px;
+            line-height: 50px;
+          }
+
+          @media screen and (min-width: $screen-medium) {
+          }
+        }
+
+        a:hover {
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+}
+
+/* --- Footer --- */
+
+footer {
+  font-family: $ff-poppins;
+  padding: 35px 15px;
+
+  @media screen and (min-width: $screen-small) {
+    padding: 50px 0 75px 0;
+  }
+
+  .container {
+    padding: 0;
+
+    @media screen and (min-width: $screen-small) {
+      padding: 0 15px;
+    }
+
+    .copyright {
+      height: 20px;
+      margin: 10px 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+
+      @media screen and (min-width: $screen-small) {
+        display: inline-block;
+        float: left;
+        width: auto;
+      }
+    }
+
+    .social {
+      display: block;
+      margin: 0;
+      text-align: center;
+
+      @media screen and (min-width: $screen-small) {
+        margin-left: 75px;
+        display: inline-block;
+        float: left;
+      }
+
+      ul {
+        display: inline-block;
+
+        @media screen and (min-width: $screen-small) {
+          display: block;
+        }
+      }
+
+      li {
+        width: 40px;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    .social-link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-indent: 40px;
+      overflow: hidden;
+      background: $black no-repeat center center;
+      background-size: auto 20px;
+      transition: background-color 150ms ease;
+    }
+
+    .twitter {
+      background-image: url(../images/icon-twitter.svg);
+      background-size: 20px auto;
+
+      &:hover {
+        background-color: $twitter;
+      }
+    }
+
+    .facebook {
+      background-image: url(../images/icon-facebook.svg);
+
+      &:hover {
+        background-color: $facebook;
+      }
+    }
+
+
+    .pinterest {
+      background-image: url(../images/icon-pinterest.svg);
+
+      &:hover {
+        background-color: $pinterest;
+      }
+    }
+
+
+    .google {
+      background-image: url(../images/icon-google.svg);
+
+      &:hover {
+        background-color: $google;
+      }
+    }
+  }
+}
+
+/* --- Cover --- */
+
+.cover {
+  background-color: rgba(0, 0, 0, .75);
+  overflow: hidden;
+  position: relative;
+  padding: 10% 15px;
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 5% 0;
+  }
+
+  @media screen and (min-width: $screen-large) {
+    padding: 100px 0;
+  }
+
+  .cover-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .subtitle {
+      color: $grey;
+    }
+  }
+}
+
+/* --- Relax --- */
+
+.relax {
+  .light-grey {
+    @media screen and (min-width: $screen-small) {
+      background: $light-grey url(../images/angular.png) no-repeat right center;
+    }
+  }
+
+  .relax-content {
+    background-color: rgba(0, 0, 0, .75);
+    position: relative;
+    overflow: hidden;
+    padding: 10% 15px;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: 5%;
+    }
+
+    @media screen and (min-width: $screen-large) {
+      padding: 100px 0;
+    }
+
+    .heading {
+      width: 100%;
+      height: auto;
+      color: $grey;
+      margin-bottom: 0;
+
+      @media screen and (min-width: $screen-medium) {
+        padding: 0 50px;
+      }
+
+      @media screen and (min-width: $screen-large) {
+        padding: 0 100px;
+      }
+
+      h2 {
+        color: $white;
+      }
+
+      .checklist {
+        li {
+          line-height: 32px;
+          position: relative;
+          padding-left: 55px;
+          margin-bottom: 10px;
+
+          &:before {
+            content: ".";
+            background: url('../images/check.svg') no-repeat center center;
+            background-size: 18px;
+            width: 30px;
+            height: 30px;
+            text-indent: -30px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid $grey;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- Tools --- */
+
+.tools {
+  .border {
+    position: relative;
+
+    @media screen and (min-width: $screen-medium) {
+      .border::before,
+      .border::after {
+        content: ".";
+        display: inline-block;
+        width: 50%;
+        height: 4px;
+        overflow: hidden;
+        background-color: $medium-grey;
+        position: absolute;
+        top: 44px;
+        left: -50%;
+        transform: translateX(calc(50% - 15px));
+      }
+
+      .border:after {
+        transform: translateX(calc(-50% + 15px));
+      }
+    }
+  }
+}
+
+/* --- CTA --- */
+
+.call-to-action {
+  background-color: $red;
+  padding: 10% 15px;
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 5% 0;
+  }
+
+  @media screen and (min-width: $screen-large) {
+    padding: 70px 0;
+  }
+
+  h2 {
+    color: $white;
+  }
+}
+
+/* --- Price --- */
+
+.price {
+  padding: 10% 15px;
+  background-color: $sheer-grey;
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 5% 0;
+  }
+
+  @media screen and (min-width: $screen-large) {
+    padding: 100px 0;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: 0 15px;
+      max-width: 940px;
+    }
+  }
+
+  .card {
+    background-color: $white;
+    padding: 25px 0;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $screen-small) {
+      margin: 0 15px;
+    }
+
+    .card-title small {
+      color: $grey;
+      font-size: 50%;
+    }
+
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid $light-grey;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .button-red {
+      width: 90%;
+      margin: 5% 5% 0 5%;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+      transition-duration: 300ms;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* --- Responsive --- */
+
+$screen-small: 550px !default;
+$screen-medium: 768px !default;
+$screen-large: 960px !default;
+$grid-columns: 12 !default;
+
+
+
+/* ********** VARIABLES ********** */
+
+/* --- Colors --- */
+
+$red: #d83359 !default;
+$white: #fff !default;
+$sheer-grey: #f9f9f9 !default;
+$light-grey: #e9e9e9 !default;
+$grey: #ccc !default;
+$medium-grey: #777 !default;
+$dark-grey: #555 !default;
+$rock-grey: #3e3e3e !default;
+$black: #000 !default;
+$twitter: #00aced !default;
+$facebook: #3b5998 !default;
+$pinterest: #cb2028 !default;
+$google: #da2713 !default;
+
+/* --- Fonts --- */
+
+$ff-bitter: 'bitterregular', Times, serif !default;
+$ff-poppins: 'poppinssemibold', Verdana, serif !default;
+$ff-poppins-bold: 'poppinsbold', Verdana, serif !default;
