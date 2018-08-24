@@ -378,78 +378,59 @@ footer {
         width: auto;
       }
     }
+  }
+}
 
-    .social {
-      display: block;
-      margin: 0;
-      text-align: center;
+.social-links {
+  text-align: center;
 
-      @media screen and (min-width: $screen-small) {
-        margin-left: 75px;
-        display: inline-block;
-        float: left;
-      }
+  @media screen and (min-width: $screen-small) {
+    margin-left: 75px;
+    float: left;
+  }
+}
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  text-indent: 50px;
+  overflow: hidden;
+  background: $black no-repeat center center;
+  background-size: auto 20px;
+  transition: background-color 150ms ease;
 
-      ul {
-        display: inline-block;
+  &--twitter {
+    background-image: url(../images/icon-twitter.svg);
+    background-size: 20px auto;
 
-        @media screen and (min-width: $screen-small) {
-          display: block;
-        }
-      }
-
-      li {
-        width: 40px;
-        float: left;
-        margin-right: 10px;
-      }
+    &:hover {
+      background-color: $twitter;
     }
+  }
 
-    .social-link {
-      display: block;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      text-indent: 40px;
-      overflow: hidden;
-      background: $black no-repeat center center;
-      background-size: auto 20px;
-      transition: background-color 150ms ease;
+  &--facebook {
+    background-image: url(../images/icon-facebook.svg);
+
+    &:hover {
+      background-color: $facebook;
     }
+  }
 
-    .twitter {
-      background-image: url(../images/icon-twitter.svg);
-      background-size: 20px auto;
+  &--pinterest {
+    background-image: url(../images/icon-pinterest.svg);
 
-      &:hover {
-        background-color: $twitter;
-      }
+    &:hover {
+      background-color: $pinterest;
     }
+  }
 
-    .facebook {
-      background-image: url(../images/icon-facebook.svg);
+  &--google {
+    background-image: url(../images/icon-google.svg);
 
-      &:hover {
-        background-color: $facebook;
-      }
-    }
-
-
-    .pinterest {
-      background-image: url(../images/icon-pinterest.svg);
-
-      &:hover {
-        background-color: $pinterest;
-      }
-    }
-
-
-    .google {
-      background-image: url(../images/icon-google.svg);
-
-      &:hover {
-        background-color: $google;
-      }
+    &:hover {
+      background-color: $google;
     }
   }
 }
